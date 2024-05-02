@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Dom</title>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    /*
+    function addLanguage(lan){
+        const li=document.createElement('li')
+        li.innerHTML=`${lan}`
+        document.querySelector('.language').appendChild(li)
+       
+
+
+
+    }
+    addLanguage("python")
+    addLanguage("c++")
+*/
+//optimised method
+
+function addoption (lan){
+    const li = document.createElement('li')
+    li.append(document.createTextNode(lan))
+    document.querySelector('.language').appendChild(li)
+}
+addoption("python")
+
+//Edit the value
+const second =document.querySelector("li:nth-child(2)")
+const newdocument = document.createElement('li')
+newdocument.textContent="c++"
+second.replaceWith(newdocument)
+//
+
+</script>
+</html>
